@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(123, 203, 146);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scoreboard{
+    width: 950px;
+    border: 2px solid #FFFFFF;
+    margin-top: 60px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 35px;
+    color: #FFFFFF;
+}
+
+.logo{
+    font-family: 'Roboto';
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 46.88px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+.score{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.compScore , .userScore{
+    text-align: center;
+    background-color: #fff;
+    height: 120px;
+    width: 130px;
+    border-radius: 9px;
+}
+
+.compScore p{
+    padding-top: 10px;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #656565;
+}
+.userScore p{
+    padding-top: 10px;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #656565;
+}
+
+.compScore h1{
+    font-family: 'Roboto';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 79.69px;
+    text-align: center;
+    color: #252525;
+}
+
+.userScore h1{
+    font-family: 'Roboto';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 79.69px;
+    text-align: center;
+    color: #252525;
+}
+
+.hands{
+    background-image: url("/assets/triangle.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70PX;
+    background-position: center;
+}
+.hands img{
+    height: 180px;
+    width: 180px;
+}
+.scissors{
+    margin-left: 43px;
+}
+.papper{
+    margin-right: 43px;
+}
+
+.hand{
+    cursor: pointer;
+    transition: all 0.25s ease-in-out; 
+}
+
+.hand:hover{
+    transform: translate3d(0px, -8px, 0px);
+}
+
+.contest{
+    padding-top: 50px;
+    width: 900px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contest img{
+    height: 220px;
+    width: 220px;
+}
+
+.user-con h1, .comp-con h1{
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+
+}
+
+.resultHeading{
+    font-family: 'Roboto';
+    font-size: 39px;
+    font-weight: 800;
+    line-height: 45.7px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.resultSubheading{
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 29.3px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+.result-con button{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 17.58px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #6B6B6B;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 9px;
+    padding: 12px;
+    margin-left: 35px;
+    cursor: pointer;
+ 
+
+
+}
+
+
+.ruleBtn {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    border: 2px solid #FFFFFF
+
+}
+
+.rulecard {
+    
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    width: 280px;
+    height: 370px;
+    padding: 20px;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px; 
+    background: #004429;
+    text-align: center;
+    color: #FFFFFF;
+    display: none;
+    z-index: 1000;
+}
+.rulecard h1{
+    padding-bottom: 10px;
+}
+
+.rules ul {
+    list-style-type: none; 
+    padding-left: 20px; 
+}
+.rules ul li::before {
+    content: '\25A0'; 
+    color:  #FFD600;
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1.5em; 
+    margin-right: 0.5em; 
+}
+.rules ul li{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15.23px;
+    text-align: left;
+    padding: 5px;
+
+} 
+
+
+
+.closeBtn{
+    position: absolute;
+    top: -29px;
+    right: -15px;
+    background: #FF0000;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 50px;
+    line-height: 20px;
+    font-family: 'Dangrek';
+    font-weight: 400;
+    line-height: 79.49px;
+    text-align: left;
+
+}
